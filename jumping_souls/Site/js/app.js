@@ -40,7 +40,7 @@ mySiteApp.controller('mySiteAppController', ['$scope', '$rootScope', 'coService'
                 if(video){
                     console.log($scope.data.videodetail_data["0"].link);
                     var html = `<div id="playerholder" style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="` + $scope.data.videodetail_data["0"].link + `" style="position:absolute;top:0;left:0;" frameborder="0" webkitallowfullscreen
+                    <iframe src="` + $scope.data.videodetail_data["0"].link + `" style="position:absolute;top:0;left:0;background-color:black;" frameborder="0" webkitallowfullscreen
                         mozallowfullscreen allowfullscreen>
                     </iframe>
                     </div>`;
@@ -72,6 +72,3 @@ mySiteApp.controller('mySiteAppController', ['$scope', '$rootScope', 'coService'
         }
     }]
 );
-
-
-

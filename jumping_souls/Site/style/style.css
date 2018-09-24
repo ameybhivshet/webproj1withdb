@@ -29,7 +29,7 @@ left: 50%; transform: translate(-50%,0); position: absolute;top:50%;
 
 
   width: 100%;
-   min-height:100%;
+   min-height:100vh;
 
   position: relative;
 
@@ -1209,16 +1209,15 @@ Parallax
 	}
   .navbar-brand {
 
-    /* background-image: url("../images/logo.png");
+    background-image: url("Site/images/long.png");
 
 
-      background-size: contain; */
-    height:auto;
-    width: 120px;
-/* margin-left: 7px;
-margin-top: 10px; */
-    /* font-size: 18px;
-    line-height: 1em; */
+      background-size: contain;
+    height:40px;
+    width: 150px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 1em;
   }
 
 }
@@ -1251,20 +1250,18 @@ margin-top: 10px; */
       border-bottom: 1px solid rgba(255,255,255,.3);
       background: #ffc20e;
   }
-
   .navbar-brand {
 
-    /* background-image: url("../images/logo.png");
-
-
-      background-size: contain; */
-    height:auto;
-    width: 120px;
-/* margin-left: 7px;
-margin-top: 10px; */
-    /* font-size: 18px;
-    line-height: 1em; */
-  }
+    background-image: url(http://localhost/jumping_souls/Site/images/logo.png);
+background-size: contain;
+height: 17px;
+width: 120px;
+margin-left: 2%;
+margin-top: 5%;
+font-size: 18px;
+line-height: 1em;
+background-repeat: no-repeat;
+    }
 
 
 }

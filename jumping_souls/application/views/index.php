@@ -63,7 +63,8 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="">
+				<a class="navbar-brand" ng-click="redirect();" href="#intro" >
+
 				</a>
 			</div>
 			<div class="collapse navbar-collapse  navbar-main-collapse">
