@@ -10,38 +10,38 @@
 
 
   //jQuery to collapse the navbar on scroll
-  $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-      $(".navbar-fixed-top").addClass("top-nav-collapse");
-    }
-
-    else {
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(".navbar").offset().top > 50) {
+  //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+  //   }
+  //
+  //   else {
+  //     $(".navbar-fixed-top").removeClass("top-nav-collapse");
+  //   }
+  // });
 
   //jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function() {
 
-    $('.navbar-nav li a').on('click', function(event) {
+    // $('.navbar-nav li a').on('click', function(event) {
+    //
+    //   if ($(this).is('a:not([href^="#"])') || $(this).attr("href") == '#') {
+    //     return;
+    //   }
+    //   var $anchor = $(this);
+    //   $('html, body').stop().animate({
+    //     scrollTop: $($anchor.attr('href')).offset().top
+    //   }, 1500, 'easeInOutExpo');
+    //   event.preventDefault();
+    // });
 
-      if ($(this).is('a:not([href^="#"])') || $(this).attr("href") == '#') {
-        return;
-      }
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
-      }, 1500, 'easeInOutExpo');
-      event.preventDefault();
-    });
-
-    $('.page-scroll a').on('click', function(event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
-      }, 1500, 'easeInOutExpo');
-      event.preventDefault();
-    });
+    // $('.page-scroll a').on('click', function(event) {
+    //   var $anchor = $(this);
+    //   $('html, body').stop().animate({
+    //     scrollTop: $($anchor.attr('href')).offset().top
+    //   }, 1500, 'easeInOutExpo');
+    //   event.preventDefault();
+    // });
 
     $(".nav li").on("click", function() {
       $(".nav li ").removeClass("active");
@@ -122,42 +122,70 @@ $('video').on('stop pause ended', function (e) {
 //       });
 //   });
 
-$(".navbar-brand").css("display","none");
-jQuery(window).load(function()
+
+// window.addEventListener('click',
+//   function() {
+    $( document ).ready(function() {
+    if($(window).width() <768)
+    {
+    console.log("click fn widht <768");
+
+    $(".navlogo").css("display","none");
+
+    $(".navbar-brand").css("display", "block");
+    // $(".navlogo").css("visibility", "hidden");
+    }
+
+    if($(window).width() >=768)
+     {
+       console.log("click fn widht >768");
+       $(".navlogo").css("display","inline-block");
+       $(".navbar-brand").css("display", "none");
+    }
+
+  });
+// $(".navbar-brand").css("display","none");
+
+$(window).load(function()
+{
+if($(window).width() <768)
+{
+console.log("load fn widht <768");
+
+$(".navlogo").css("display","none");
+
+$(".navbar-brand").css("display", "block");
+// $(".navlogo").css("visibility", "hidden");
+}
+if($(window).width() >=768)
+{
+
+
+  $(".navlogo").css("display","inline-block");
+  $(".navbar-brand").css("display", "none");
+}
+});
+
+ $(window).resize(function()
 {
 if($(window).width() <768)
 {
 
+console.log("rsz fn widht <768");
+// $(".navlogo").css("display","none");
+
 
 $(".navlogo").css("display","none");
-
-$(".navbar-brand").css("display", "inherit");
-// $(".navlogo").css("visibility", "hidden");
+$(".navbar-brand").css("display", "block");
 }
-// if($(window).width() >=768)
-// {
-//
-//
-// // $(".navlogo").css("display","inline");
-//
-//
-// $(".navlogo").css("visibility", "visible");
-// }
-});
+if($(window).width() >=768)
+ {
+   console.log("rsz fn widht >768");
+   $(".navlogo").css("display","inline-block");
+   $(".navbar-brand").css("display", "none");
+}
 
-// jquery(window).resize(function()
-// {
-// if($(window).width() <768)
-// {
-//
-//
-// // $(".navlogo").css("display","none");
-//
-//
-// $(".navlogo").css("visibility", "hidden");
-// }
-//
-// });
+});
 
 
   $("#player").css("visibility", "hidden");
